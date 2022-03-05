@@ -363,106 +363,10 @@ span.psw {
   padding-top: 60px;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-</head>
-<body>
 
 
-<a class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right w3-border w3-border-green wbt" style="margin-bottom:10px;margin-top:10px;border-radius:30px; opacity: 100%; border-width: 2px; margin-right:10px; border-width:2px; border-color:#de2626" onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-</body>
-</html>
-
+  <a href="/beta.html" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right w3-border w3-border-green wbt" style="margin-bottom:10px;margin-top:10px;border-radius:30px; opacity: 100%; border-width: 2px; margin-right:10px; border-width:2px; border-color:#de2626" onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
   <a href="/blog.html" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-bottom:10px;margin-top:10px;border-radius:30px; opacity: 100%;">BLOG</a>
   <a href="/contact.html" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;border-radius:30px; opacity: 100%;">CONTACT</a>
   <a href="https://www.paypal.com/donate/?hosted_button_id=2B7UJEC6VYYXC" class="w3-hide-small w3-bar-item w3-mobile w3-medium w3-right w3-green bobo" style="margin-top:10px;border-radius:30px; opacity: 100%;">DONATE</a>
