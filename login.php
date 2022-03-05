@@ -1,3 +1,4 @@
+AddType application/x-httpd-php5 .php
 <!DOCTYPE HTML>  
 <html>
 <head>
