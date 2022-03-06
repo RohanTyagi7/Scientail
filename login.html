@@ -297,8 +297,8 @@ function login () {
   password = document.getElementById('password').value
 
   // Validate input fields
-  if (validate_email(email) == false || validate_password(password) == false || validate_feild(full_name) == false) {
-    alert('Incorrect Email or Password!!')
+  if (validate_email(email) == false || validate_password(password) == false || validate_field(full_name) == false) {
+    alert('Email or Password is Outta Line!!')
     return
     // Don't continue running the code
   }
