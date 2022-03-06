@@ -206,15 +206,12 @@ function register () {
   full_name = document.getElementById('full_name').value
 
   // Validate input fields
-  if (validate_email(email) == false || validate_password(password) == false) {
-    alert('Email or Password is Incorrect!!')
+  if (validate_email(email) == false || validate_password(password) == false || validate_full_name(full_name) == false) {
+    alert('A Field is Incorrect!!')
     return
     // Don't continue running the code
   }
-  if (validate_field(full_name) == false) {
-    alert('One or More Extra Fields is Incorrect!!')
-    return
-  }
+ 
  
   // Move on with Auth
   auth.createUserWithEmailAndPassword(email, password)
@@ -253,10 +250,11 @@ function login () {
   // Get all our input fields
   email = document.getElementById('email').value
   password = document.getElementById('password').value
+  full_name = document.getElementById('full_name').value
 
   // Validate input fields
-  if (validate_email(email) == false || validate_password(password) == false || validate_field(full_name) == false) {
-    alert('Email or Password is Incorrect!!')
+  if (validate_email(email) == false || validate_password(password) == false || validate_full_name(full_name) == false) {
+    alert('A Field is Incorrect!!')
     return
     // Don't continue running the code
   }
@@ -315,16 +313,18 @@ function validate_password(password) {
   }
 }
 
-function validate_field(field) {
-  if (field == null) {
+function validate_full_name(full_name) {
+  if (full_name == null) {
     return false
+    alert('nope.')
+    return
   }
 
-  if (field.length <= 0) {
+  if (full_name.length <= 0) {
     return false
-  } else {
-    return true
-  }
+    alert('nope.')
+    return
+  } 
 }</script>
 
 </html>
