@@ -1,17 +1,5 @@
-RewriteEngine on
-
+RewriteEngine on 
 # Redirect to another domain: www.scientail.org.
-RewriteCond %{HTTPS} on
-RewriteCond %{HTTP_HOST} !^(www\.)?scientail\.org$ [NC]
-RewriteRule .* http://www.scientail.org%{REQUEST_URI} [R=301,L]
-# Same for HTTPS:
-RewriteCond %{HTTPS} on
-RewriteCond %{HTTP_HOST} !^(www\.)?scientail\.org$ [NC]
-RewriteRule .* https://www.scientail.org%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
-# 301 Redirect URLs.
-Redirect 301 /www.scientail.org https://www.scientail.org
-
-RewriteCond %{REQUEST_URI} !^/www\.scientail\.org/404$ [NC]
-RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|svg|swf|css|ico|js)$ [NC]
-RewriteRule .* /www.scientail.org/404 [R=302,L]
