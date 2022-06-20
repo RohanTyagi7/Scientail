@@ -1,5 +1,0 @@
-RewriteEngine on 
-# Redirect to another domain: www.scientail.org.
-RewriteCond %{HTTPS} on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-
