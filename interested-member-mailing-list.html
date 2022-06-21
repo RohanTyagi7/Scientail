@@ -434,8 +434,23 @@ var dateTime = date+' | '+time;
   </head>
   <body>
 
-      <button class="g-recaptcha w3-button w3-round w3-pale-red w3-padding-large w3-margin-bottom" data-sitekey="6Lf1RL8dAAAAAIVdJLU9NDSrcNuzWaI8atztnXQA" data-callback='onSubmit' onclick='SubForm()' >Submit</button>
-      <br/>
+    <button class="g-recaptcha w3-button w3-round w3-pale-red w3-padding-large w3-margin-bottom" data-sitekey="6Lf1RL8dAAAAAIVdJLU9NDSrcNuzWaI8atztnXQA" data-callback='onSubmit' id="myButton" onClick="return disableMe(), SubForm()" >Submit</button>
+      <script type="text/javascript">
+    var clicked = false;
+    function disableMe() {
+        if (document.getElementById) {
+            if (!clicked) {
+                document.getElementById("myButton").value = "thank you";
+                clicked = true;
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+    }
+</script>      <br/>
 
   </body>
 </html>
