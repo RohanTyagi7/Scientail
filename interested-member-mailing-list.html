@@ -392,21 +392,39 @@ input[type="checkbox"]{
 		<br/>
 		<label>Do you have anything to ask/add (we could get back to you in an email)</label>
 		<input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Type Your Message Here..." required name="Message">
-		<br/>
-    Time when submitting:
-<input type="text" id="Time" required name="Time" readonly>
+		<input style="border-width:0px; color:white; border-color:white; outline-width: 0;" type="text" id="Time" required name="Time" readonly>
 <br><br>
 <script>
   var today = new Date();
+  let hour = "";
+  if(((today.getHours()-10)%24) < 10){
+  	hour = "0" + ((today.getHours()-10)%24);
+  }
+  else{
+  	hour = ((today.getHours()-10)%24);
+  }
+  let min = "";
+  if(((today.getMinutes()+30)%60)< 10){
+  	min = "0" + ((today.getMinutes()+30)%60);
+  }
+  else{
+  	min = ((today.getMinutes()+30)%60);
+  }
+  let sec = "";
+  if(today.getSeconds() < 10){
+  	sec = "0" + today.getSeconds();
+  }
+  else{
+  	sec = today.getSeconds();
+  }
 var date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var time = hour + ":" + min + ":" + sec;
 var dateTime = date+' | '+time;
   document.getElementById("Time").value = dateTime;
 </script>
 	</form>
 <html>
   <head>
-    <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script>
        function onSubmit(token) {
