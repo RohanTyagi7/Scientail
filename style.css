@@ -5,7 +5,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.container1 {
+.container {
   position: relative;
   text-align: center;
   color: black;
@@ -203,6 +203,3 @@ body {
 .invisiblet{
   visibility: hidden;
 }
-a {
-      text-decoration:none;
-   }
