@@ -9,13 +9,13 @@ html, body {
   position: relative;
   text-align: center;
   color: black;
-  margin-top:-17vh;
+  margin-top:-7vh;
 }
 
 .centered {
   position: absolute;
-  top: 40vh;
-  left: 60vw;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
   width: 400px;
 }
