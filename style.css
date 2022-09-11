@@ -1,31 +1,3 @@
-/*** Works on common browsers ***/
-::selection {
-    background-color: #71bf78;
-    color: #fff;
-}
-
-/*** Mozilla based browsers ***/
-::-moz-selection {
-    background-color: #71bf78;
-    color: #fff;
-}
-
-/***For Other Browsers ***/
-::-o-selection {
-    background-color: #71bf78;
-    color: #fff;
-}
-
-::-ms-selection {
-    background-color: #71bf78;
-    color: #fff;
-}
-
-/*** For Webkit ***/
-::-webkit-selection {
-    background-color: #71bf78;
-    color: #fff;
-}
 html, body {
   height: 100%;
   width: 100%;
