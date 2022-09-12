@@ -15,7 +15,15 @@ html, body {
 .centered {
   position: absolute;
   top: 50vh;
-  left: 53vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.centered1 {
+  position: absolute;
+  top: 25vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
   width: 400px;
 }
