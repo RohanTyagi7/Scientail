@@ -257,7 +257,10 @@
                             }).catch(function(error) {
                                 console.error("Error adding document: ", error);
                             });
-              const myTimeout = setTimeout(window.location.href = '/contact-finished', 2000);
+              const myTimeout = setTimeout(move(), 1000);
+                function move() {
+                    window.location.href = '/contact-finished';
+                }
             }
           </script>
             </center>
