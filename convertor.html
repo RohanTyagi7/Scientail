@@ -345,58 +345,17 @@ body {
               <font size="+4">Binary to Decimal to ASCII Convertor</font><br><br>
             <div style="border: 1px solid black; border-radius: 10px; width: 30%; padding-top: 10%; padding-bottom: 10%; min-width: 400px; text-align: center;">
           <label style="font-size: 22px;">Binary Number:</label><br>
-          <input type="text" id="binaryoutput" style="width: 20%; min-width: 250px;  text-align: center; font-size: 18px;" ><br><br><button onclick="f1()">Copy</button>
+          <input type="text" id="binaryoutput" style="width: 20%; min-width: 250px;  text-align: center; font-size: 18px;" ><br><br>
           <label style="font-size: 22px;">Decimal Number:</label><br>
-          <input type="text" id="decimaloutput" style="width: 20%; min-width: 250px;  text-align: center; font-size: 18px;" ><br><br><button onclick="f2()">Copy</button>
+          <input type="text" id="decimaloutput" style="width: 20%; min-width: 250px;  text-align: center; font-size: 18px;" ><br><br>
           <label style="font-size: 22px;">ASCII Character:</label><br>
-          <input type="text" id="asciioutput" style="width: 20%; min-width: 250px;  text-align: center; font-size: 18px;"><button onclick="f3()">Copy</button>
+          <input type="text" id="asciioutput" style="width: 20%; min-width: 250px;  text-align: center; font-size: 18px;">
               </div>
 </form>
             </center>
             </main>
       <script>
-	function f1() {
-	  // Get the text field
-	  var copyText = document.getElementById("binaryoutput");
-
-	  // Select the text field
-	  copyText.select();
-	  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-	  // Copy the text inside the text field
-	  navigator.clipboard.writeText(copyText.value);
-
-	  // Alert the copied text
-	  alert("Copied the text: " + copyText.value);
-	}
-	function f2() {
-	  // Get the text field
-	  var copyText = document.getElementById("decimaloutput");
-
-	  // Select the text field
-	  copyText.select();
-	  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-	  // Copy the text inside the text field
-	  navigator.clipboard.writeText(copyText.value);
-
-	  // Alert the copied text
-	  alert("Copied the text: " + copyText.value);
-	}
-	  function f3() {
-	  // Get the text field
-	  var copyText = document.getElementById("asciioutput");
-
-	  // Select the text field
-	  copyText.select();
-	  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-	  // Copy the text inside the text field
-	  navigator.clipboard.writeText(copyText.value);
-
-	  // Alert the copied text
-	  alert("Copied the text: " + copyText.value);
-	}
+	
         function changeOut(which) {
           if(which == 'binaryoutput'){
             let bin = document.getElementById(which).value.replaceAll(" ", "");
